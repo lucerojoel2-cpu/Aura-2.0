@@ -5,7 +5,7 @@ import { GoogleGenAI, Type, GenerateContentResponse, Modality } from "@google/ge
  * Always use named parameter for apiKey and obtain it exclusively from process.env.API_KEY.
  * Do not ask the user for it or define it elsewhere.
  */
-export const createAI = () => new GoogleGenAI({ apiKey: process.env.API_KEY });
+export const createAI = () => new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export const MODELS = {
   TEXT_FLASH: 'gemini-3-flash-preview',
